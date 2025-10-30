@@ -1,0 +1,48 @@
+:root {
+  /* Colors */
+  --primary-color: #7300f5;
+  --secondary-color: #202021;
+  --background-color: #f7f7f9;
+  --header-footer-bg: #fff;
+  --border-color: #ddd;
+  --text-color: #111;
+  --text-muted: #666;
+  --text-meta-color: #555;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, Arial, sans-serif;
+  --font-size-sm: 13px;
+  --font-size-lg: 20px;
+  --font-size-base: 14px;
+
+  /* Layout / spacing */
+  --gap-sm: 8px;
+  --gap-md: 12px;
+  --gap: 16px;
+  --max-width: 1200px;
+
+  /* Shadows */
+  --shadow-light: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+  /* Cards */
+  --card-gap: var(--gap);
+  --card-padding: var(--gap-md);
+  --card-radius: 8px;
+  --card-img-height: 140px;
+  --card-height: 230px;
+  --animal-grid-min-height: 500px;
+
+  /* Nav */
+  --nav-gap: var(--gap-md);
+  --nav-link-color: var(--secondary-color);
+  --nav-link-hover-color: var(--primary-color);
+  --nav-link-font-weight: 600; 
+  --nav-transition: 0.2s ease;
+
+  /* Inputs & form elements */
+  --input-padding: var(--gap-sm);
+  --input-border-radius: 6px;
+  --border-width: 1px;
+  --border-width-focus: 2px; 
+  --radio-size: 22px;
+}

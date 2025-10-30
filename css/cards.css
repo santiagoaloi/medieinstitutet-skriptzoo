@@ -1,0 +1,54 @@
+.animals {
+  display: grid;
+  gap: var(--gap); 
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  min-height: var(--animal-grid-min-height);
+}
+
+.card {
+  background-color: var(--header-footer-bg);
+  border-radius: var(--card-radius);
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm); 
+  cursor: pointer;
+  height: var(--card-height);
+  transition: transform 1s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: var(--card-img-height);
+  object-fit: cover;
+  border-radius: var(--input-border-radius);
+}
+
+.meta {
+  font-size: var(--font-size-sm); 
+  color: var(--text-meta-color);
+}
+
+#no-results {
+  display: none;
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  padding: var(--gap-md);
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .animals { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .animals { grid-template-columns: 1fr; }
+}

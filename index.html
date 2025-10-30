@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#ffffff">
+    <title>Skriptzoo — Djurvisning</title>
+    <meta name="description"
+        content="Skriptzoo — Djurvisning, Sök, filtrera och sortera efter namn, typ, färg och födelseår.">
+    <meta name="keywords" content="Zoo, Djur, Lejon, Elefant, Pingvin, Sortera, Sök">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/dialog.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/colors.css">
+</head>
+
+<body>
+    <header>
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+            <h1 class="logo">Skriptzoo</h1>
+            <nav aria-label="Huvudnavigering">
+                <a href="#">Hem</a>
+                <a target="_blank" href="https://github.com/santiagoaloi/medieinstitutet-skriptzoo">Github</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="layout">
+
+            <!-- Search and Filtering-->
+            <aside aria-label="Filtrering och sökning">
+
+                <!-- Search -->
+                <div class="search-section">
+                    <h2 class="search-section__title">Filter & Sök</h2>
+                    <div class="search-section__input">
+                        <input id="search" placeholder="namn, typ, färg, beskrivning, år... " autofocus />
+                    </div>
+                </div>
+
+                <!-- Sorting -->
+                <section class="search-section search-section--sort">
+                    <h3 class="search-section__title">Sortera</h3>
+                    <label><input type="radio" name="sort" value="name" checked /> Namn</label>
+                    <label><input type="radio" name="sort" value="type" /> Typ</label>
+                    <label><input type="radio" name="sort" value="color" /> Färg</label>
+                    <label><input type="radio" name="sort" value="birth" /> Födelseår</label>
+                </section>
+            </aside>
+
+            <section aria-label="Djurlista" class="animals" id="animals">
+
+
+                <!-- No search results -->
+                <div id="no-results">
+                    <h2>Inga djur hittades.</h2>
+                    <p>Prova ett annat namn eller djurtyp</p>
+                </div>
+
+                <!-- Animal cards -->
+                <article class="card" tabindex="0" data-name="Bella" data-type="Pingvin" data-color="Svart"
+                    data-desc="En social pingvin som älskar att simma och stå i klungor." data-birth="2016">
+                    <img src="img/penguin.jpg" alt="Pingvin" />
+                    <h4>Bella</h4>
+                    <div class="meta">Pingvin • Född 2016 • <span class="color-text color-svart">Svart</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Cleo" data-type="Katt" data-color="Vit"
+                    data-desc="Cleo gillar att vila i solen och jaga små leksaker." data-birth="2017">
+                    <img src="img/cat.jpg" alt="Katt" />
+                    <h4>Cleo</h4>
+                    <div class="meta">Katt • Född 2017 • <span class="color-text color-vit">Vit</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Daisy" data-type="Zebra" data-color="Vit"
+                    data-desc="Daisy springer ofta i flock och älskar det öppna savannområdet." data-birth="2014">
+                    <img src="img/zebra.jpg" alt="Zebra" />
+                    <h4>Daisy</h4>
+                    <div class="meta">Zebra • Född 2014 • <span class="color-text color-vit">Vit</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Finn" data-type="Räka" data-color="Röd"
+                    data-desc="Finn lever i havet och hoppar ibland ovanför vattnet." data-birth="2021">
+                    <img src="img/shrimp.jpg" alt="Räka" />
+                    <h4>Finn</h4>
+                    <div class="meta">Räka • Född 2021 • <span class="color-text color-röd">Röd</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Kalle" data-type="Känguru" data-color="Brun"
+                    data-desc="Hoppar gärna och är alltid nyfiken på nya omgivningar." data-birth="2018">
+                    <img src="img/kangaroo.jpg" alt="Känguru" />
+                    <h4>Kalle</h4>
+                    <div class="meta">Känguru • Född 2018 • <span class="color-text color-brun">Brun</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Leo Jr." data-type="Lejonunge" data-color="Gul"
+                    data-desc="Nyfiken liten lejonunge som gillar att leka med syskonen." data-birth="2022">
+                    <img src="img/lion-cub.jpg" alt="Lejonunge" />
+                    <h4>Leo Jr.</h4>
+                    <div class="meta">Lejonunge • Född 2022 • <span class="color-text color-gul">Gul</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Luna" data-type="Fågel" data-color="Blå"
+                    data-desc="En liten fågel som sjunger vackert på morgonen." data-birth="2019">
+                    <img src="img/bird.jpg" alt="Fågel" />
+                    <h4>Luna</h4>
+                    <div class="meta">Fågel • Född 2019 • <span class="color-text color-blå">Blå</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Maja" data-type="Elefant" data-color="Grå"
+                    data-desc="Maja gillar att leka i vatten och använda sin snabel för att plaska." data-birth="2010">
+                    <img src="img/elephant.jpg" alt="Elefant" />
+                    <h4>Maja</h4>
+                    <div class="meta">Elefant • Född 2010 • <span class="color-text color-grå">Grå</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Nemo" data-type="Clownfisk" data-color="Orange"
+                    data-desc="En liten men livlig fisk som alltid simmar mellan korallreven." data-birth="2020">
+                    <img src="img/clownfish.jpg" alt="Clownfisk" />
+                    <h4>Nemo</h4>
+                    <div class="meta">Clownfisk • Född 2020 • <span class="color-text color-orange">Orange</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Oscar" data-type="Giraff" data-color="Beige"
+                    data-desc="Oscar sträcker sig högt för att nå de saftigaste bladen på träden." data-birth="2012">
+                    <img src="img/giraffe.jpg" alt="Giraff" />
+                    <h4>Oscar</h4>
+                    <div class="meta">Giraff • Född 2012 • <span class="color-text color-beige">Beige</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Polly" data-type="Papegoja" data-color="Grön"
+                    data-desc="Polly pratar gärna och älskar att flyga runt i buren." data-birth="2018">
+                    <img src="img/parrot.jpg" alt="Papegoja" />
+                    <h4>Polly</h4>
+                    <div class="meta">Papegoja • Född 2018 • <span class="color-text color-grön">Grön</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Rocky" data-type="Hund" data-color="Brun"
+                    data-desc="Energi fylld hund som älskar att leka med barn." data-birth="2016">
+                    <img src="img/dog.jpg" alt="Hund" />
+                    <h4>Rocky</h4>
+                    <div class="meta">Hund • Född 2016 • <span class="color-text color-brun">Brun</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Sally" data-type="Sköldpadda" data-color="Grön"
+                    data-desc="Sakta men säkert tar Sally sig fram och älskar att sola på stenar." data-birth="2008">
+                    <img src="img/turtle.jpg" alt="Sköldpadda" />
+                    <h4>Sally</h4>
+                    <div class="meta">Sköldpadda • Född 2008 • <span class="color-text color-röd">Röd</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Santi" data-type="Lejon" data-color="Gul"
+                    data-desc="Stolt lejon från savannen som älskar att vila i solen." data-birth="2015">
+                    <img src="img/lion.jpg" alt="Lejon" />
+                    <h4>Santi</h4>
+                    <div class="meta">Lejon • Född 2015 • <span class="color-text color-gul">Gul</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Sammy" data-type="Skata" data-color="Svart"
+                    data-desc="Sammy är nyfiken och samlar ofta glittriga föremål." data-birth="2020">
+                    <img src="img/magpie.jpg" alt="Skata" />
+                    <h4>Sammy</h4>
+                    <div class="meta">Skata • Född 2020 • <span class="color-text color-svart">Svart</span></div>
+                </article>
+
+                <article class="card" tabindex="0" data-name="Max" data-type="Björn" data-color="Brun"
+                    data-desc="Max är stor och stark men älskar att bada i floden." data-birth="2011">
+                    <img src="img/bear.jpg" alt="Björn" />
+                    <h4>Max</h4>
+                    <div class="meta">Björn • Född 2011 • <span class="color-text color-brun">Brun</span></div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© Skriptzoo 2025 — webbutveckling-1-prov</p>
+    </footer>
+
+
+    <!-- Drill down dialog -->
+    <dialog id="animal-dialog">
+        <h3 id="dialog-name"></h3>
+        <img id="dialog-img" src="" alt="" />
+        <div class="meta" id="dialog-meta"></div>
+        <p id="dialog-desc"></p>
+        <button id="close-dialog">Stäng</button>
+    </dialog>
+
+    <!-- JS -->
+    <script src="js/dialog.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/search.js"></script>
+
+</body>
+
+</html>
