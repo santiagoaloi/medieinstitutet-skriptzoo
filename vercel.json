@@ -16,7 +16,10 @@
     {
       "src": "img/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "favicon/**",
+      "use": "@vercel/static"
     }
   ]
-
 }
