@@ -10,6 +10,9 @@ html, body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
+  /* Reserve scrollbar space to avoid layout shift when scrollbars appear/disappear */
+  scrollbar-gutter: stable both-edges;
+
 }
 
 body {
